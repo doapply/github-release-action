@@ -14,9 +14,9 @@
 </div>
 
 <div align="center">
-  <a href="https://github.com/softprops/action-gh-release/actions">
-		<img src="https://github.com/softprops/action-gh-release/workflows/Main/badge.svg"/>
-	</a>
+  <a href="https://github.com/doapply/github-release-action/actions">
+  <img src="https://github.com/doapply/github-release-action/workflows/Main/badge.svg"/>
+ </a>
 </div>
 
 <br />
@@ -43,7 +43,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: doapply/github-release-action@v1
         if: startsWith(github.ref, 'refs/tags/')
 ```
 
@@ -64,7 +64,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: doapply/github-release-action@v1
 ```
 
 ### ⬆️ Uploading release assets
@@ -94,7 +94,7 @@ jobs:
       - name: Test
         run: cat Release.txt
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: doapply/github-release-action@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: Release.txt
@@ -118,7 +118,7 @@ jobs:
       - name: Test
         run: cat Release.txt
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: doapply/github-release-action@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
@@ -150,7 +150,7 @@ jobs:
       - name: Generate Changelog
         run: echo "# Good things have arrived" > ${{ github.workspace }}-CHANGELOG.txt
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: doapply/github-release-action@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
           body_path: ${{ github.workspace }}-CHANGELOG.txt
@@ -234,4 +234,4 @@ permissions:
 
 [GitHub token permissions](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#permissions-for-the-github_token) can be set for an individual job, workflow, or for Actions as a whole.
 
-Doug Tangren (softprops) 2019
+Doug Tangren (doapply) 2019
