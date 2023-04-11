@@ -2,7 +2,7 @@
   📦 :octocat:
 </div>
 <h1 align="center">
-  action gh-release
+  github-release-action
 </h1>
 
 <p align="center">
